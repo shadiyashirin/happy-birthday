@@ -1,3 +1,11 @@
+window.onload = function () {
+  const audio = document.getElementById("background-music");
+  audio.play().catch(() => {
+    // If autoplay fails, log an error or handle it gracefully
+    console.log("Autoplay was blocked by the browser.");
+  });
+};
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
@@ -26,11 +34,6 @@ const fetchData = () => {
 
 // Animation Timeline
 const animationTimeline = () => {
-   // Get the audio element
-   const audio = document.getElementById("birthday-audio");
-
-   // Play the audio when the animation starts
-   audio.play();
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
