@@ -1,3 +1,15 @@
+.ten {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.new-photo {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 html {
   box-sizing: border-box;
 }
