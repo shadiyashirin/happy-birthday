@@ -1,8 +1,16 @@
 window.onload = function () {
   const audio = document.getElementById("background-music");
-  audio.muted = false; // Unmute the audio
-  audio.play().catch(() => {
-    console.log("Autoplay was blocked by the browser.");
+  const overlay = document.getElementById("overlay");
+
+  // Play audio when the user clicks anywhere on the page
+  overlay.addEventListener("click", () => {
+    audio.play()
+      .then(() => {
+        overlay.style.display = "none"; // Hide the overlay after playing
+      })
+      .catch((error) => {
+        console.log("Audio playback failed:", error);
+      });
   });
 };
 // Import the data to customize and insert them into page
