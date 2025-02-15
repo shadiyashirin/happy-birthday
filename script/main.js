@@ -1,11 +1,10 @@
 window.onload = function () {
   const audio = document.getElementById("background-music");
+  audio.muted = false; // Unmute the audio
   audio.play().catch(() => {
-    // If autoplay fails, log an error or handle it gracefully
     console.log("Autoplay was blocked by the browser.");
   });
 };
-
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
