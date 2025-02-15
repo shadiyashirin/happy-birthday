@@ -127,18 +127,6 @@ const animationTimeline = () => {
       },
       "+=0.7"
     )
-    .from(".ten", 0.7, {
-      opacity: 0,
-      y: 50,
-      scale: 0.5,
-      ease: Power2.easeOut
-    })
-    .to(".ten", 0.7, {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      ease: Power2.easeOut
-    })
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".idea-2", 0.7, ideaTextTrans)
@@ -302,7 +290,19 @@ const animationTimeline = () => {
         rotation: 90
       },
       "+=1"
-    );
+    )
+    .from(".ten", 0.7, {
+      opacity: 0,
+      y: 50,
+      scale: 0.5,
+      ease: Power2.easeOut
+    })
+    .to(".ten", 0.7, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      ease: Power2.easeOut
+    });
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
